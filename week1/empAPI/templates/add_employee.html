@@ -4,108 +4,59 @@
 
 <h2 class="mb-4">Add Employee</h2>
 
-<form>
+<form method="POST">
 
 <div class="row">
 
 <div class="col-md-6 mb-3">
-
 <label>First Name</label>
-
-<input
-type="text"
-class="form-control"
-placeholder="Enter First Name">
-
+<input type="text" class="form-control" name="first_name" required>
 </div>
 
 <div class="col-md-6 mb-3">
-
 <label>Last Name</label>
-
-<input
-type="text"
-class="form-control"
-placeholder="Enter Last Name">
-
+<input type="text" class="form-control" name="last_name" required>
 </div>
 
 <div class="col-md-6 mb-3">
-
 <label>Profession</label>
-
-<input
-type="text"
-class="form-control">
-
+<input type="text" class="form-control" name="profession" required>
 </div>
 
 <div class="col-md-6 mb-3">
-
 <label>Department</label>
-
-<input
-type="text"
-class="form-control">
-
+<input type="text" class="form-control" name="department" required>
 </div>
 
 <div class="col-md-6 mb-3">
-
 <label>City</label>
-
-<input
-type="text"
-class="form-control">
-
+<input type="text" class="form-control" name="city" required>
 </div>
 
 <div class="col-md-6 mb-3">
-
 <label>Branch</label>
-
-<input
-type="text"
-class="form-control">
-
+<input type="text" class="form-control" name="branch" required>
 </div>
 
 <div class="col-md-6 mb-3">
-
 <label>Email</label>
-
-<input
-type="email"
-class="form-control">
-
+<input type="email" class="form-control" name="email" required>
 </div>
 
 <div class="col-md-6 mb-3">
-
 <label>Phone</label>
-
-<input
-type="text"
-class="form-control">
-
+<input type="text" class="form-control" name="phone" required>
 </div>
 
 <div class="col-md-6 mb-3">
-
 <label>Salary</label>
-
-<input
-type="number"
-class="form-control">
-
+<input type="number" class="form-control" name="salary" required>
 </div>
 
 </div>
 
-<button class="btn btn-success">
-
+<button type="submit" class="btn btn-success">
 Save Employee
-
 </button>
 
 </form>

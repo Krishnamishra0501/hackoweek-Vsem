@@ -4,10 +4,36 @@
 
 <h2 class="mb-4">Employee List</h2>
 
-<div class="alert alert-info">
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Profession</th>
+            <th>Department</th>
+            <th>City</th>
+            <th>Branch</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
 
-No Employees Added Yet.
-
-</div>
+    <tbody>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.first_name }} {{ employee.last_name }}</td>
+            <td>{{ employee.profession }}</td>
+            <td>{{ employee.department }}</td>
+            <td>{{ employee.city }}</td>
+            <td>{{ employee.branch }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.phone }}</td>
+            <td>{{ employee.salary }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 
 {% endblock %}
