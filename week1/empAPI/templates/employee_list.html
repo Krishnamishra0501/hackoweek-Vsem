@@ -5,35 +5,60 @@
 <h2 class="mb-4">Employee List</h2>
 
 <table class="table table-bordered table-striped">
-    <thead class="table-dark">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Profession</th>
-            <th>Department</th>
-            <th>City</th>
-            <th>Branch</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Salary</th>
-        </tr>
-    </thead>
 
-    <tbody>
-        {% for employee in employees %}
-        <tr>
-            <td>{{ employee.id }}</td>
-            <td>{{ employee.first_name }} {{ employee.last_name }}</td>
-            <td>{{ employee.profession }}</td>
-            <td>{{ employee.department }}</td>
-            <td>{{ employee.city }}</td>
-            <td>{{ employee.branch }}</td>
-            <td>{{ employee.email }}</td>
-            <td>{{ employee.phone }}</td>
-            <td>{{ employee.salary }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
+<thead class="table-dark">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Profession</th>
+<th>Department</th>
+<th>City</th>
+<th>Branch</th>
+<th>Email</th>
+<th>Phone</th>
+<th>Salary</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for employee in employees %}
+
+<tr>
+
+<td>{{ employee.id }}</td>
+<td>{{ employee.first_name }} {{ employee.last_name }}</td>
+<td>{{ employee.profession }}</td>
+<td>{{ employee.department }}</td>
+<td>{{ employee.city }}</td>
+<td>{{ employee.branch }}</td>
+<td>{{ employee.email }}</td>
+<td>{{ employee.phone }}</td>
+<td>{{ employee.salary }}</td>
+
+<td>
+
+<a href="/edit/{{ employee.id }}" class="btn btn-warning btn-sm">
+Edit
+</a>
+
+<a href="/delete/{{ employee.id }}"
+class="btn btn-danger btn-sm"
+onclick="return confirm('Delete this employee?');">
+
+Delete
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
 </table>
 
 {% endblock %}

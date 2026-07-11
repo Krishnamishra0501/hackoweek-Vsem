@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Edit Employee</h2>
+
+<form method="POST">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+<label>First Name</label>
+<input type="text" class="form-control" name="first_name" value="{{ employee.first_name }}">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Last Name</label>
+<input type="text" class="form-control" name="last_name" value="{{ employee.last_name }}">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Profession</label>
+<input type="text" class="form-control" name="profession" value="{{ employee.profession }}">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Department</label>
+<input type="text" class="form-control" name="department" value="{{ employee.department }}">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>City</label>
+<input type="text" class="form-control" name="city" value="{{ employee.city }}">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Branch</label>
+<input type="text" class="form-control" name="branch" value="{{ employee.branch }}">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Email</label>
+<input type="email" class="form-control" name="email" value="{{ employee.email }}">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Phone</label>
+<input type="text" class="form-control" name="phone" value="{{ employee.phone }}">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Salary</label>
+<input type="number" class="form-control" name="salary" value="{{ employee.salary }}">
+</div>
+
+</div>
+
+<button type="submit" class="btn btn-primary">
+Update Employee
+</button>
+
+</form>
+
+{% endblock %}
