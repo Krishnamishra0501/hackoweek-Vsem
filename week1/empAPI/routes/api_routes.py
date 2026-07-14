@@ -86,5 +86,5 @@ def delete_employee(id):
     db.session.commit()
 
     return jsonify({
-        "message": "Employee deleted successfully"
+        "message": " deleted successfully"
     })
